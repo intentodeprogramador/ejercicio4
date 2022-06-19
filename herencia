@@ -1,0 +1,87 @@
+package com.mycompany.practicaencapsulacion;
+
+public class Practicaencapsulacion {
+
+    public static void main(String[] args) {
+        
+        Cliente cliente = new Cliente();
+        Trabajador trabajador = new Trabajador();
+        
+        cliente.setNombre("Jose");
+        cliente.setEdad(45);
+        cliente.setTelefono(4658887);
+        cliente.setCredito(true);
+        
+        System.out.println("El nombre del cliente es : "+cliente.getNombre());
+        System.out.println("La edad del cliente es : "+cliente.getEdad());
+        System.out.println("El telefono del cliente es : "+cliente.getTelefono());
+        System.out.println("Tiene credito? = "+cliente.isCredito());
+        
+    }
+}
+
+package com.mycompany.practicaencapsulacion;
+
+public class Persona {
+    private int edad;
+    private String nombre;
+    private int telefono;
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+    
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }   
+    
+}
+
+package com.mycompany.practicaencapsulacion;
+
+public class Cliente extends Persona {
+
+    public boolean credito;
+
+    public void setCredito(boolean credito) {
+        this.credito = credito;
+        
+    }
+
+    public boolean isCredito() {
+        return credito;
+    }
+
+}
+
+package com.mycompany.practicaencapsulacion;
+
+public class Trabajador extends Persona {
+    
+    public double salario;
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+}
